@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odyssey | AI Program Manager</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ------------------------
+GLOBAL STYLES
+-------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ------------------------
+SECTION 1 – ROOTS (TIRUNELVELI)
+Warm Earth Palette
+-------------------------*/
+
+.roots {
+  background: linear-gradient(135deg, #7c4a2d, #d98c4c);
+  color: #fff4e6;
+}
+
+.roots h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.roots p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ------------------------
+SECTION 2 – EDUCATION (COIMBATORE)
+Organic Green
+-------------------------*/
+
+.education {
+  background: linear-gradient(135deg, #1f3d2b, #4e7d5d);
+  color: #e7f5ec;
+}
+
+.education h2 {
+  font-size: 3rem;
+}
+
+.education .content {
+  max-width: 700px;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ------------------------
+SECTION 3 – CAREER (BANGALORE AI)
+Cyberpunk AI Blue
+-------------------------*/
+
+.career {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #dff6ff;
+  font-family: 'Space Mono', monospace;
+}
+
+.terminal {
+  background: #0d1117;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  max-width: 700px;
+}
+
+.terminal span {
+  color: #58a6ff;
+}
+
+.stat-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ------------------------
+SECTION 4 – HOBBIES & SOUL
+Deep Dark
+-------------------------*/
+
+.soul {
+  background: #0b0c10;
+  color: #c5c6c7;
+}
+
+.soul h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.box {
+  background: #1f2833;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.box:hover {
+  transform: rotate(3deg) scale(1.05);
+}
+
+/* Chessboard */
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 20px);
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.chessboard div {
+  width: 20px;
+  height: 20px;
+}
+
+.chessboard div:nth-child(even) {
+  background: #66fcf1;
+}
+
+.chessboard div:nth-child(odd) {
+  background: #0b0c10;
+}
+
+/* ------------------------
+SECTION 5 – VALUES & CONTACT
+-------------------------*/
+
+.values {
+  background: #111;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.values p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Smooth fade effect */
+
+section {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Saxophone Ambient Music -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
+</audio>
+
+<section class="roots">
+  <h1>Tirunelveli</h1>
+  <p>
+    From the warmth of Tamil Nadu's sweet heritage,
+    shaped by tradition, family, and culture.
+    A foundation built on values — where every journey begins at home.
+  </p>
+</section>
+
+<section class="education">
+  <h2>Coimbatore – Foundations</h2>
+  <div class="content">
+    Years of logic, engineering discipline and green landscapes.
+    Where structure met curiosity.
+    Where analytical thinking became instinct.
+  </div>
+</section>
+
+<section class="career">
+  <h2>Bangalore – AI Program Leadership</h2>
+  <div class="terminal">
+    <p><span>> role:</span> AI Program Manager</p>
+    <p><span>> location:</span> Bangalore, India</p>
+    <p><span>> expertise:</span> ML Strategy | Scalable AI Systems | Cross-Functional Leadership</p>
+    <p><span>> mission:</span> Align machine intelligence with human impact</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <h3>15+</h3>
+      <p>AI Initiatives Delivered</p>
+    </div>
+    <div class="stat-card">
+      <h3>5+</h3>
+      <p>Cross-Functional Teams Led</p>
+    </div>
+    <div class="stat-card">
+      <h3>30%</h3>
+      <p>Efficiency Improvement</p>
+    </div>
+  </div>
+</section>
+
+<section class="soul">
+  <h2>Mind & Soul</h2>
+  <div class="bento">
+    <div class="box">
+      <h3>Anime</h3>
+      <p>One Piece | Code Geass</p>
+    </div>
+    <div class="box">
+      <h3>Chess</h3>
+      <div class="chessboard">
+        <!-- 64 squares -->
+        <!-- 8x8 generated manually -->
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Logic & Puzzles</h3>
+      <p>Structured thinking. Pattern recognition. Strategy.</p>
+    </div>
+    <div class="box">
+      <h3>Beginner Saxophonist</h3>
+      <p>Learning rhythm. Finding breath between algorithms.</p>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <h2>Family First</h2>
+  <p>
+    No matter the scale of machine intelligence,
+    no matter the ambition of systems built —
+    the core remains human.
+    Family anchors the journey.
+    Technology amplifies it.
+  </p>
+</section>
+
+</body>
+</html>
