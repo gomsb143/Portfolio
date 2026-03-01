@@ -3,279 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Odyssey | Program Leadership</title>
+<title>Your Name | AI Program Manager</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* ---------------- GLOBAL ---------------- */
-
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  cursor:none;
+/* ===== ROOT ===== */
+:root {
+    --bg:#0B0F14;
+    --text:#E6EDF3;
+    --muted:#9DA7B3;
+    --accent:#7C9AFF;
+    --divider:rgba(255,255,255,0.06);
+    --max-width:1100px;
 }
 
-body {
-  background:#000;
-  font-family:'Inter',sans-serif;
-  color:#fff;
-  scroll-snap-type:y mandatory;
-  overflow-y:scroll;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.8;
 }
 
-/* Custom Cursor */
-
-body::after {
-  content:"";
-  position:fixed;
-  width:18px;
-  height:18px;
-  border:1px solid #66fcf1;
-  border-radius:50%;
-  pointer-events:none;
-  transform:translate(-50%,-50%);
-  left:50%;
-  top:50%;
-  animation:cursorPulse 2s infinite ease-in-out;
+/* ===== NAV ===== */
+nav{
+    position:fixed;
+    width:100%;
+    padding:1.6rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(11,15,20,0.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--divider);
+    z-index:100;
 }
 
-@keyframes cursorPulse {
-  0% { transform:translate(-50%,-50%) scale(1); opacity:.8;}
-  50% { transform:translate(-50%,-50%) scale(1.3); opacity:.4;}
-  100% { transform:translate(-50%,-50%) scale(1); opacity:.8;}
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    margin-left:2rem;
+    font-size:0.85rem;
 }
 
-/* Progress Indicator */
+nav a:hover{color:var(--text);}
 
-.progress {
-  position:fixed;
-  top:0;
-  left:0;
-  height:4px;
-  width:100%;
-  background:linear-gradient(90deg,#d79c5c,#3f6b4f,#66fcf1);
-  animation:progressScroll linear;
-  animation-timeline:scroll();
+.social-icons{
+    display:flex;
+    gap:1.2rem;
+    margin-left:2rem;
 }
 
-/* SECTION BASE */
-
-section {
-  height:100vh;
-  scroll-snap-align:start;
-  padding:6vw;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-  opacity:0;
-  transform:translateY(40px);
-  animation:fadeIn ease forwards;
-  animation-timeline:view();
-  animation-range:entry 20% cover 40%;
+.social-icons a{
+    color:var(--muted);
+    font-size:0.9rem;
 }
 
-@keyframes fadeIn {
-  to { opacity:1; transform:translateY(0); }
+.social-icons a:hover{color:var(--text);}
+
+/* ===== LAYOUT ===== */
+section{
+    padding:9rem 2rem;
+    max-width:var(--max-width);
+    margin:auto;
 }
 
-/* Glass Panels */
-
-.glass {
-  backdrop-filter:blur(20px);
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:20px;
-  padding:2rem;
-  max-width:800px;
+h1,h2,h3{
+    font-family:'Manrope',sans-serif;
+    letter-spacing:-0.4px;
 }
 
-/* Typography Motion */
+h1{font-size:3.4rem;}
+h2{font-size:2rem;margin-bottom:3rem;}
+p{color:var(--muted);}
 
-h1,h2 {
-  font-weight:600;
-  letter-spacing:.05em;
-  animation:slideIn 1s ease forwards;
+.accent{color:var(--accent);}
+
+.divider{
+    height:1px;
+    background:var(--divider);
+    margin:6rem 0;
 }
 
-@keyframes slideIn {
-  from { opacity:0; transform:translateX(-30px);}
-  to { opacity:1; transform:translateX(0);}
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;}
+
+.hero-layout{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:5rem;
+    align-items:center;
 }
 
-/* ---------------- ROOTS ---------------- */
-
-.roots {
-  background:linear-gradient(120deg,#5a2d1c,#d79c5c);
+.profile-wrapper{
+    position:relative;
+    width:220px;
+    height:220px;
 }
 
-.roots svg {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  opacity:.2;
+.profile-wrapper img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
 }
 
-/* ---------------- EDUCATION ---------------- */
-
-.education {
-  background:linear-gradient(135deg,#1d3a28,#3f6b4f);
+.image-glow{
+    position:absolute;
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(124,154,255,0.25) 0%,rgba(124,154,255,0) 70%);
+    top:-10px;
+    left:-10px;
+    z-index:1;
 }
 
-.education svg {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  opacity:.15;
+.micro-bio{
+    color:var(--muted);
+    font-size:0.9rem;
+    margin-bottom:1.5rem;
 }
 
-/* ---------------- CAREER ---------------- */
-
-.career {
-  background:#000;
-  font-family:'Space Mono',monospace;
+.hero-social{
+    display:flex;
+    gap:1.4rem;
+    margin-bottom:2.5rem;
 }
 
-.neural {
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle,rgba(0,255,255,.3) 1px,transparent 1px);
-  background-size:40px 40px;
-  animation:neuralMove 20s linear infinite;
-  opacity:.08;
+.hero-social a{
+    color:var(--muted);
+    font-size:1rem;
 }
 
-@keyframes neuralMove {
-  from { background-position:0 0; }
-  to { background-position:200px 200px; }
+.hero-social a:hover{color:var(--text);}
+
+.hero-tagline{
+    font-size:1.9rem;
+    margin:2rem 0;
 }
 
-/* Skyline Bangalore */
-
-.career svg {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  opacity:.2;
+.button{
+    display:inline-block;
+    padding:0.9rem 1.8rem;
+    border:1px solid var(--divider);
+    text-decoration:none;
+    color:var(--text);
+    font-size:0.8rem;
+    margin-right:1rem;
 }
 
-/* ---------------- STRATEGY ---------------- */
-
-.strategy {
-  background:#05080f;
+.button.primary{
+    background:linear-gradient(135deg,#7C9AFF,#5E72EB);
+    border:none;
 }
 
-.chessboard {
-  width:200px;
-  height:200px;
-  margin-top:2rem;
-  background:
-    linear-gradient(45deg,#66fcf1 25%,transparent 25%),
-    linear-gradient(-45deg,#66fcf1 25%,transparent 25%),
-    linear-gradient(45deg,transparent 75%,#66fcf1 75%),
-    linear-gradient(-45deg,transparent 75%,#66fcf1 75%);
-  background-size:50px 50px;
-  background-position:0 0,0 25px,25px -25px,-25px 0;
+/* ===== METRICS ===== */
+.metrics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:4rem;
 }
 
-/* ---------------- CONTACT ---------------- */
+.metrics h3{font-size:2.4rem;}
 
-.contact {
-  background:#111;
-  text-align:center;
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:3rem;
 }
 
-.cta {
-  margin-top:2rem;
-  display:inline-block;
-  padding:1rem 2rem;
-  border:1px solid #66fcf1;
-  border-radius:30px;
-  color:#66fcf1;
-  text-decoration:none;
-  transition:.3s;
+.case{margin-bottom:4rem;}
+.case h3{color:var(--accent);margin-bottom:1rem;}
+
+footer{
+    text-align:center;
+    padding:6rem 2rem;
+    font-size:0.8rem;
+    color:var(--muted);
 }
 
-.cta:hover {
-  background:#66fcf1;
-  color:#000;
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .hero-layout{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .profile-wrapper{
+        margin:0 auto 3rem auto;
+    }
+    .hero-social{justify-content:center;}
 }
 
 </style>
 </head>
-
 <body>
 
-<div class="progress"></div>
+<!-- NAV -->
+<nav>
+    <div style="font-weight:600;">AI<span class="accent">.PM</span></div>
+    <div style="display:flex;align-items:center;">
+        <a href="#impact">Impact</a>
+        <a href="#programs">Programs</a>
+        <a href="#operating">Operating Model</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#contact">Contact</a>
 
-<!-- ROOTS -->
-<section class="roots">
-  <div class="glass">
-    <h1>Tirunelveli</h1>
-    <p>Warmth. Heritage. Family-first philosophy.  
-    The foundation of every strategic decision.</p>
-  </div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</nav>
 
-  <!-- Simple temple silhouette -->
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-    <polygon points="0,200 150,120 300,200" fill="white"/>
-  </svg>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-layout">
+
+    <div class="profile-wrapper">
+        <div class="image-glow"></div>
+        <img src="profile.jpg" alt="Your Name">
+    </div>
+
+    <div>
+        <h1>Your Name</h1>
+
+        <div class="micro-bio">
+            AI Program Manager · Enterprise AI Transformation · Based in San Francisco
+        </div>
+
+        <div class="hero-social">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <div class="hero-tagline">
+            Architecting <span class="accent">Scalable AI Systems</span><br>
+            With Governance and Measurable Impact
+        </div>
+
+        <p>
+            I lead multi-million-dollar AI portfolios translating advanced research
+            into production-grade systems. Over 11+ years, I have scaled GenAI,
+            NLP, and Computer Vision programs aligning executive strategy,
+            governance, and business outcomes.
+        </p>
+
+        <br>
+        <a href="#impact" class="button primary">View Impact</a>
+        <a href="AI_Program_Manager_Resume.pdf" class="button">Download Resume</a>
+    </div>
+
+</div>
 </section>
 
-<!-- EDUCATION -->
-<section class="education">
-  <div class="glass">
-    <h2>Coimbatore – Foundations</h2>
-    <p>Engineering discipline. Logical thinking. Structured growth.</p>
-  </div>
+<div class="divider"></div>
 
-  <!-- Hills silhouette -->
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-    <polygon points="0,200 200,130 400,180 700,120 1000,200" fill="white"/>
-  </svg>
+<!-- IMPACT -->
+<section id="impact">
+<h2>Measured Impact</h2>
+<div class="metrics">
+    <div><h3>$35M+</h3><p>Revenue influenced</p></div>
+    <div><h3>$20M+</h3><p>Portfolio governance</p></div>
+    <div><h3>40%</h3><p>Deployment acceleration</p></div>
+    <div><h3>28%</h3><p>Operational efficiency gains</p></div>
+</div>
 </section>
 
-<!-- CAREER -->
-<section class="career">
-  <div class="neural"></div>
+<div class="divider"></div>
 
-  <div class="glass">
-    <h2>Bangalore – AI Program Leadership</h2>
-    <p>> 15+ Enterprise AI Programs</p>
-    <p>> 8+ Years Experience</p>
-    <p>> ML Strategy → Production → Scale</p>
-    <p>> Cross-Functional Leadership</p>
-  </div>
+<!-- PROGRAMS -->
+<section id="programs">
+<h2>Selected AI Programs</h2>
 
-  <!-- Skyline silhouette -->
-  <svg viewBox="0 0 1000 200" preserveAspectRatio="none">
-    <rect x="100" y="120" width="80" height="80" fill="white"/>
-    <rect x="250" y="100" width="60" height="100" fill="white"/>
-    <rect x="400" y="140" width="100" height="60" fill="white"/>
-  </svg>
+<div class="case">
+<h3>Enterprise LLM Transformation</h3>
+<p>Directed cross-region LLM integration programs, establishing evaluation pipelines, governance controls, and human-in-the-loop validation — reducing churn by 18%.</p>
+</div>
+
+<div class="case">
+<h3>Computer Vision Platform Scale</h3>
+<p>Scaled production CV infrastructure from early-stage to Series B growth with global MLOps orchestration and performance monitoring.</p>
+</div>
+
+<div class="case">
+<h3>Responsible AI Governance Framework</h3>
+<p>Designed bias detection standards, compliance alignment, executive reporting structures, and risk review boards.</p>
+</div>
 </section>
 
-<!-- STRATEGY -->
-<section class="strategy">
-  <div class="glass">
-    <h2>Strategic Mind</h2>
-    <p>Chess. Code Geass. One Piece.  
-    Strategy is not a hobby — it’s a discipline.</p>
-    <div class="chessboard"></div>
-  </div>
+<div class="divider"></div>
+
+<!-- OPERATING MODEL -->
+<section id="operating">
+<h2>AI Operating Model</h2>
+<div class="grid">
+    <div><h3 class="accent">Discovery</h3><p>Business framing and hypothesis modeling.</p></div>
+    <div><h3 class="accent">Experimentation</h3><p>Rapid prototyping and benchmark validation.</p></div>
+    <div><h3 class="accent">Production</h3><p>MLOps orchestration and reliability engineering.</p></div>
+    <div><h3 class="accent">Governance</h3><p>Bias mitigation and executive transparency.</p></div>
+</div>
 </section>
+
+<div class="divider"></div>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+<h2>Leadership Philosophy</h2>
+<p>
+Sustainable AI impact is built on disciplined execution, measurable value,
+and transparent governance. I believe enterprise AI success depends not
+on model novelty, but on operational rigor, stakeholder trust, and
+resilient system design.
+</p>
+</section>
+
+<div class="divider"></div>
 
 <!-- CONTACT -->
-<section class="contact">
-  <h2>Let’s Build Responsible AI at Scale</h2>
-  <p>Bangalore | AI Program Manager</p>
-  <a href="mailto:your@email.com" class="cta">Connect</a>
+<section id="contact">
+<h2>Open to Strategic AI Leadership</h2>
+<p>Available for enterprise AI program leadership and transformation roles.</p>
+<br><br>
+<a href="mailto:your@email.com" class="button primary">Connect</a>
 </section>
+
+<footer>
+© 2026 Your Name — AI Program Leadership
+</footer>
 
 </body>
 </html>
