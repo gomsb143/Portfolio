@@ -1,343 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | AI Program Manager</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gomathi Balan S N— Technical AI Program Manager · Bengaluru</title>
+  <meta name="description" content="Technical AI Program Manager based in Bengaluru. Engineering background. 11+ years delivering across FinTech, Blockchain, and Enterprise AI. Open to new opportunities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="in-shared.css">
+  <style>
+    .hero{padding:130px 2rem 80px;max-width:960px;margin:0 auto;}
+    .hero-h1{font-size:clamp(48px,7vw,76px);}
+    .hero-meta{display:flex;gap:3rem;margin:0 0 2.5rem;flex-wrap:wrap;}
+    .meta-item{display:flex;flex-direction:column;}
+    .meta-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.4rem;}
+    .meta-value{font-size:15px;font-weight:700;color:var(--accent);}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .stats-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .stats-bar-inner{max-width:960px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);}
+    .sbar-item{padding:1.6rem 1rem;border-right:1px solid var(--border);text-align:center;}
+    .sbar-item:last-child{border-right:none;}
+    .sbar-value{font-size:28px;font-weight:800;color:var(--accent);line-height:1;}
+    .sbar-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:.4rem;}
+    @media(max-width:600px){.stats-bar-inner{grid-template-columns:1fr 1fr;}.sbar-item:nth-child(2){border-right:none;}.sbar-item:nth-child(3){border-right:none;}}
 
-<style>
+    .tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+    .track{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:1.8rem;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+    .track::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);}
+    .track:hover{border-color:var(--accent);box-shadow:0 8px 32px rgba(21,128,61,.1);}
+    .track-label{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.7rem;}
+    .track-title{font-size:19px;font-weight:800;color:var(--text);margin-bottom:1.2rem;line-height:1.2;}
+    .track-items{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.2rem;}
+    .track-item{background:var(--bg3);padding:.85rem 1rem;border-radius:4px;border:1px solid var(--border);cursor:pointer;transition:all .2s;}
+    .track-item:hover{border-color:var(--accent);background:var(--accent-dim);}
+    .ti-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:.2rem;}
+    .ti-meta{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em;}
+    .track-proof{background:var(--accent-dim);border-left:3px solid var(--accent);padding:.85rem 1rem;border-radius:4px;font-size:13px;color:var(--text2);line-height:1.6;}
+    @media(max-width:768px){.tracks-grid{grid-template-columns:1fr;}}
 
-/* ===== ROOT ===== */
-:root {
-    --bg:#0B0F14;
-    --text:#E6EDF3;
-    --muted:#9DA7B3;
-    --accent:#7C9AFF;
-    --divider:rgba(255,255,255,0.06);
-    --max-width:1100px;
-}
+    .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+    .testi-card{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:1.8rem;transition:border-color .2s;}
+    .testi-card:hover{border-color:var(--accent);}
+    .testi-mark{font-size:36px;color:var(--accent);opacity:.35;line-height:.8;margin-bottom:.9rem;font-family:Georgia,serif;}
+    .testi-pull{font-size:15px;color:var(--text);font-weight:600;line-height:1.5;margin-bottom:1rem;font-style:italic;}
+    .testi-read-more{font-size:12px;color:var(--accent);cursor:pointer;background:none;border:none;padding:0;font-weight:700;}
+    .testi-full{display:none;margin-top:.8rem;font-size:13px;color:var(--text2);line-height:1.8;font-style:italic;}
+    .testi-full.open{display:block;}
+    .testi-author{display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--border);}
+    .testi-avatar{width:36px;height:36px;border-radius:4px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#000;flex-shrink:0;}
+    .testi-name{font-size:13px;font-weight:700;color:var(--text);}
+    .testi-role{font-size:11px;color:var(--text3);margin-top:.2rem;}
+    @media(max-width:600px){.testi-grid{grid-template-columns:1fr;}}
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    .proj-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem;}
+    .proj-strip-card{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:1.4rem;transition:all .2s;display:flex;flex-direction:column;gap:.5rem;}
+    .proj-strip-card:hover{border-color:var(--accent);}
+    .ps-title{font-size:15px;font-weight:800;color:var(--text);}
+    .ps-desc{font-size:12px;color:var(--text3);line-height:1.5;}
+    @media(max-width:600px){.proj-strip{grid-template-columns:1fr;}}
 
-body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    line-height:1.8;
-}
+    .looking-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+    .looking-card{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:1.8rem;}
+    .looking-card h3{font-size:15px;font-weight:800;color:var(--text);margin-bottom:.8rem;}
+    .looking-card p{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:.6rem;}
+    .role-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;}
+    @media(max-width:600px){.looking-grid{grid-template-columns:1fr;}}
 
-/* ===== NAV ===== */
-nav{
-    position:fixed;
-    width:100%;
-    padding:1.6rem 2rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(11,15,20,0.85);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--divider);
-    z-index:100;
-}
+    .cta-strip{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:2.5rem;text-align:center;margin-top:1.5rem;}
+    .cta-strip h2{font-size:26px;font-weight:800;margin-bottom:.7rem;letter-spacing:-.02em;}
+    .cta-strip p{font-size:14px;color:var(--text2);margin-bottom:1.5rem;}
 
-nav a{
-    color:var(--muted);
-    text-decoration:none;
-    margin-left:2rem;
-    font-size:0.85rem;
-}
-
-nav a:hover{color:var(--text);}
-
-.social-icons{
-    display:flex;
-    gap:1.2rem;
-    margin-left:2rem;
-}
-
-.social-icons a{
-    color:var(--muted);
-    font-size:0.9rem;
-}
-
-.social-icons a:hover{color:var(--text);}
-
-/* ===== LAYOUT ===== */
-section{
-    padding:9rem 2rem;
-    max-width:var(--max-width);
-    margin:auto;
-}
-
-h1,h2,h3{
-    font-family:'Manrope',sans-serif;
-    letter-spacing:-0.4px;
-}
-
-h1{font-size:3.4rem;}
-h2{font-size:2rem;margin-bottom:3rem;}
-p{color:var(--muted);}
-
-.accent{color:var(--accent);}
-
-.divider{
-    height:1px;
-    background:var(--divider);
-    margin:6rem 0;
-}
-
-/* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;}
-
-.hero-layout{
-    display:grid;
-    grid-template-columns:260px 1fr;
-    gap:5rem;
-    align-items:center;
-}
-
-.profile-wrapper{
-    position:relative;
-    width:220px;
-    height:220px;
-}
-
-.profile-wrapper img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
-    border-radius:50%;
-    position:relative;
-    z-index:2;
-}
-
-.image-glow{
-    position:absolute;
-    width:240px;
-    height:240px;
-    border-radius:50%;
-    background:radial-gradient(circle,rgba(124,154,255,0.25) 0%,rgba(124,154,255,0) 70%);
-    top:-10px;
-    left:-10px;
-    z-index:1;
-}
-
-.micro-bio{
-    color:var(--muted);
-    font-size:0.9rem;
-    margin-bottom:1.5rem;
-}
-
-.hero-social{
-    display:flex;
-    gap:1.4rem;
-    margin-bottom:2.5rem;
-}
-
-.hero-social a{
-    color:var(--muted);
-    font-size:1rem;
-}
-
-.hero-social a:hover{color:var(--text);}
-
-.hero-tagline{
-    font-size:1.9rem;
-    margin:2rem 0;
-}
-
-.button{
-    display:inline-block;
-    padding:0.9rem 1.8rem;
-    border:1px solid var(--divider);
-    text-decoration:none;
-    color:var(--text);
-    font-size:0.8rem;
-    margin-right:1rem;
-}
-
-.button.primary{
-    background:linear-gradient(135deg,#7C9AFF,#5E72EB);
-    border:none;
-}
-
-/* ===== METRICS ===== */
-.metrics{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:4rem;
-}
-
-.metrics h3{font-size:2.4rem;}
-
-/* ===== GRID ===== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:3rem;
-}
-
-.case{margin-bottom:4rem;}
-.case h3{color:var(--accent);margin-bottom:1rem;}
-
-footer{
-    text-align:center;
-    padding:6rem 2rem;
-    font-size:0.8rem;
-    color:var(--muted);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-    .hero-layout{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-    .profile-wrapper{
-        margin:0 auto 3rem auto;
-    }
-    .hero-social{justify-content:center;}
-}
-
-</style>
+    .hire-reasons{display:flex;flex-direction:column;gap:1rem;margin-top:1.2rem;}
+    .reason{padding:1rem;background:var(--bg3);border:1px solid var(--border);border-radius:4px;border-left:3px solid var(--accent);}
+    .reason-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;}
+    .reason-desc{font-size:12px;color:var(--text2);line-height:1.6;}
+  </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
-    <div style="font-weight:600;">AI<span class="accent">.PM</span></div>
-    <div style="display:flex;align-items:center;">
-        <a href="#impact">Impact</a>
-        <a href="#programs">Programs</a>
-        <a href="#operating">Operating Model</a>
-        <a href="#philosophy">Philosophy</a>
-        <a href="#contact">Contact</a>
-
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </div>
+  <a href="in-index.html" class="nav-brand">Sanji Balan</a>
+  <div class="nav-links">
+    <a href="in-about.html" class="nav-link">About</a>
+    <a href="in-work.html" class="nav-link">Work</a>
+    <a href="in-projects.html" class="nav-link">Projects</a>
+    <a href="in-story.html" class="nav-link">Thinking</a>
+    <a href="in-contact.html" class="nav-link">Contact</a>
+    <button class="nav-cta" onclick="openModal('hire-modal')">Open to Opportunities</button>
+  </div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="in-about.html">About</a>
+  <a href="in-work.html">Work</a>
+  <a href="in-projects.html">Projects</a>
+  <a href="in-story.html">Thinking</a>
+  <a href="in-contact.html">Contact</a>
+  <a href="#" class="m-cta" onclick="openModal('hire-modal')">Open to Opportunities</a>
+</div>
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-layout">
+<div class="hero reveal">
+  <p class="hero-tag">Technical AI Program Manager · Bengaluru</p>
+  <h1 class="hero-h1">Engineering roots.<br>Enterprise scale.<br>AI delivery.</h1>
+  <p class="hero-sub">Started as a developer. Moved into DevOps. Now leading AI programmes at enterprise scale. 11+ years shipping across FinTech, Blockchain, and Global ERP. Open to new opportunities.</p>
+  <div class="hero-meta">
+    <div class="meta-item"><span class="meta-label">Experience</span><span class="meta-value">11+ years</span></div>
+    <div class="meta-item"><span class="meta-label">Releases Shipped</span><span class="meta-value">60+</span></div>
+    <div class="meta-item"><span class="meta-label">People Reached</span><span class="meta-value">8,000+</span></div>
+    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Bengaluru, India</span></div>
+  </div>
+  <div class="btns">
+    <button class="btn btn-primary" onclick="openModal('hire-modal')">Open to Opportunities</button>
+    <a href="in-work.html" class="btn btn-outline">View Work</a>
+    <a href="mailto:gomsbalan@gmail.com" class="btn btn-outline">Email Me</a>
+  </div>
+</div>
 
-    <div class="profile-wrapper">
-        <div class="image-glow"></div>
-        <img src="profile.jpg" alt="Your Name">
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="sbar-item"><div class="sbar-value">60+</div><div class="sbar-label">Releases Shipped</div></div>
+    <div class="sbar-item"><div class="sbar-value">8K+</div><div class="sbar-label">Trained · 3 months</div></div>
+    <div class="sbar-item"><div class="sbar-value">5→12</div><div class="sbar-label">Sprint Stories · 3 months</div></div>
+    <div class="sbar-item"><div class="sbar-value">20+</div><div class="sbar-label">Tools Built</div></div>
+  </div>
+</div>
+
+<div style="max-width:960px;margin:0 auto;padding:0 2rem;">
+
+  <div class="sec reveal">
+    <p class="sec-tag">Delivery Model</p>
+    <h2 class="sec-h2">Two tracks. One PM.</h2>
+    <p class="sec-intro">AI enablement at people-scale and process automation that makes delivery faster. Both running simultaneously.</p>
+    <div class="tracks-grid">
+      <div class="track">
+        <p class="track-label">Track 1 · Training</p>
+        <h3 class="track-title">AI Enablement at Scale</h3>
+        <div class="track-items">
+          <div class="track-item" onclick="openModal('t1p1')"><div class="ti-name">AI Upskilling Initiative</div><div class="ti-meta">8,000+ reached · 3 months · voluntary</div></div>
+          <div class="track-item" onclick="openModal('t1p2')"><div class="ti-name">TechTalks Workshop Series</div><div class="ti-meta">200+ participants · best-in-class recognition</div></div>
+          <div class="track-item" onclick="openModal('t1p3')"><div class="ti-name">AI Newsletter</div><div class="ti-meta">Tower-wide · ongoing publication</div></div>
+        </div>
+        <div class="track-proof">8,000 employees reached in 3 months — no mandate, no requirement, just sessions that delivered enough value that people kept coming.</div>
+      </div>
+      <div class="track">
+        <p class="track-label">Track 2 · Automation</p>
+        <h3 class="track-title">AI-Powered Delivery</h3>
+        <div class="track-items">
+          <div class="track-item" onclick="openModal('t2p1')"><div class="ti-name">Phase 1: AI Dedup Filter</div><div class="ti-meta">Flags duplicate requests before budget is spent</div></div>
+          <div class="track-item" onclick="openModal('t2p2')"><div class="ti-name">Phase 2: Transcript-to-BRD</div><div class="ti-meta">Meeting recordings → structured BRDs</div></div>
+          <div class="track-item" onclick="openModal('t2p3')"><div class="ti-name">7-Phase AI Lifecycle</div><div class="ti-meta">Custom delivery framework · v2.1</div></div>
+        </div>
+        <div class="track-proof">Sprint throughput went from 5 to 12 user stories in 3 months — same team, same size, better process.</div>
+      </div>
     </div>
+  </div>
 
-    <div>
-        <h1>Your Name</h1>
-
-        <div class="micro-bio">
-            AI Program Manager · Enterprise AI Transformation · Based in San Francisco
-        </div>
-
-        <div class="hero-social">
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
-
-        <div class="hero-tagline">
-            Architecting <span class="accent">Scalable AI Systems</span><br>
-            With Governance and Measurable Impact
-        </div>
-
-        <p>
-            I lead multi-million-dollar AI portfolios translating advanced research
-            into production-grade systems. Over 11+ years, I have scaled GenAI,
-            NLP, and Computer Vision programs aligning executive strategy,
-            governance, and business outcomes.
-        </p>
-
-        <br>
-        <a href="#impact" class="button primary">View Impact</a>
-        <a href="AI_Program_Manager_Resume.pdf" class="button">Download Resume</a>
+  <div class="sec reveal">
+    <p class="sec-tag">Testimonials</p>
+    <h2 class="sec-h2">What former managers say</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-pull">What stood out most was his maturity and level-headedness, especially when navigating complex situations.</p>
+        <button class="testi-read-more" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Show less':'Read full recommendation'">Read full recommendation</button>
+        <div class="testi-full">I had the pleasure of working closely with Balan for over a year. From the outset, Balan impressed me with his eagerness to learn and his proactive approach to tackling new challenges. He consistently sought out opportunities to expand his skills and took initiative in driving projects forward. His ability to communicate effectively and manage stakeholder expectations contributed greatly to our project successes.</div>
+        <div class="testi-author"><div class="testi-avatar">ST</div><div><div class="testi-name">Satya Teppala</div><div class="testi-role">Senior PM · NTT DATA · Former Manager</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-pull">He works hard, shows great hunger to learn, and carries the fire to grow. He thrives when fully engaged and challenged.</p>
+        <button class="testi-read-more" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Show less':'Read full recommendation'">Read full recommendation</button>
+        <div class="testi-full">Balan demonstrates high energy and strong potential in driving execution. He is keen on establishing processes and streamlining work wherever possible.</div>
+        <div class="testi-author"><div class="testi-avatar">VK</div><div><div class="testi-name">Venky</div><div class="testi-role">Senior Manager · HPE · Former Manager</div></div></div>
+      </div>
     </div>
+  </div>
 
+  <div class="sec reveal">
+    <p class="sec-tag">Personal Projects</p>
+    <h2 class="sec-h2">Built outside of work. Shipped anyway.</h2>
+    <p class="sec-intro">20+ tools built on my own time via prompt engineering. No team. No deadline. No budget.</p>
+    <div class="proj-strip">
+      <div class="proj-strip-card">
+        <div class="ps-title">GB-Forge</div>
+        <div class="ps-desc">20 live browser tools. Built with Claude AI.</div>
+        <a href="https://gomsb143.github.io/gb-forge/" target="_blank" class="card-link" style="margin-top:auto;">Launch →</a>
+      </div>
+      <div class="proj-strip-card">
+        <div class="ps-title">AI-Delivery-Process</div>
+        <div class="ps-desc">7-phase AI programme manual. v2.1.</div>
+        <a href="https://gomsb143.github.io/AI-Delivery-Process/" target="_blank" class="card-link" style="margin-top:auto;">Launch →</a>
+      </div>
+      <div class="proj-strip-card">
+        <div class="ps-title">What's Next</div>
+        <div class="ps-desc">Career guide for Class 12 students. India.</div>
+        <a href="https://gomsb143.github.io/whatnext/" target="_blank" class="card-link" style="margin-top:auto;">Launch →</a>
+      </div>
+    </div>
+    <div style="margin-top:1rem;"><a href="in-projects.html" class="card-link">See all projects →</a></div>
+  </div>
+
+  <div class="sec reveal">
+    <p class="sec-tag">What I'm Looking For</p>
+    <h2 class="sec-h2">Open to the right opportunity.</h2>
+    <div class="looking-grid">
+      <div class="looking-card">
+        <h3>Target Roles</h3>
+        <div class="role-tags">
+          <span class="tag">Technical AI Program Manager</span>
+          <span class="tag">AI Delivery Manager</span>
+          <span class="tag">Digital Transformation PM</span>
+          <span class="tag">AI Product Operations</span>
+        </div>
+      </div>
+      <div class="looking-card">
+        <h3>What I Value</h3>
+        <p>Organisations where AI delivery is treated seriously — not as a checkbox. Teams where engineering and programme management work together, not around each other.</p>
+        <p>Open to product companies, enterprises, and consulting environments.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec reveal">
+    <div class="cta-strip">
+      <h2>Let's talk.</h2>
+      <p>Currently at HPE, open to conversations about the right next step.</p>
+      <div class="btns" style="justify-content:center;">
+        <a href="mailto:gomsbalan@gmail.com" class="btn btn-primary">gomsbalan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/gomathibalansn143/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- IMPACT -->
-<section id="impact">
-<h2>Measured Impact</h2>
-<div class="metrics">
-    <div><h3>$35M+</h3><p>Revenue influenced</p></div>
-    <div><h3>$20M+</h3><p>Portfolio governance</p></div>
-    <div><h3>40%</h3><p>Deployment acceleration</p></div>
-    <div><h3>28%</h3><p>Operational efficiency gains</p></div>
-</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROGRAMS -->
-<section id="programs">
-<h2>Selected AI Programs</h2>
-
-<div class="case">
-<h3>Enterprise LLM Transformation</h3>
-<p>Directed cross-region LLM integration programs, establishing evaluation pipelines, governance controls, and human-in-the-loop validation — reducing churn by 18%.</p>
-</div>
-
-<div class="case">
-<h3>Computer Vision Platform Scale</h3>
-<p>Scaled production CV infrastructure from early-stage to Series B growth with global MLOps orchestration and performance monitoring.</p>
-</div>
-
-<div class="case">
-<h3>Responsible AI Governance Framework</h3>
-<p>Designed bias detection standards, compliance alignment, executive reporting structures, and risk review boards.</p>
-</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- OPERATING MODEL -->
-<section id="operating">
-<h2>AI Operating Model</h2>
-<div class="grid">
-    <div><h3 class="accent">Discovery</h3><p>Business framing and hypothesis modeling.</p></div>
-    <div><h3 class="accent">Experimentation</h3><p>Rapid prototyping and benchmark validation.</p></div>
-    <div><h3 class="accent">Production</h3><p>MLOps orchestration and reliability engineering.</p></div>
-    <div><h3 class="accent">Governance</h3><p>Bias mitigation and executive transparency.</p></div>
-</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PHILOSOPHY -->
-<section id="philosophy">
-<h2>Leadership Philosophy</h2>
-<p>
-Sustainable AI impact is built on disciplined execution, measurable value,
-and transparent governance. I believe enterprise AI success depends not
-on model novelty, but on operational rigor, stakeholder trust, and
-resilient system design.
-</p>
-</section>
-
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>Open to Strategic AI Leadership</h2>
-<p>Available for enterprise AI program leadership and transformation roles.</p>
-<br><br>
-<a href="mailto:your@email.com" class="button primary">Connect</a>
-</section>
 
 <footer>
-© 2026 Your Name — AI Program Leadership
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Gomathi Balan S N· Technical AI Program Manager · Bengaluru</span>
+    <div class="footer-links">
+      <a href="mailto:gomsbalan@gmail.com" class="footer-link">gomsbalan@gmail.com</a>
+      <a href="https://www.linkedin.com/in/gomathibalansn143/" class="footer-link" target="_blank">LinkedIn</a>
+      <a href="https://github.com/gomsb143" class="footer-link" target="_blank">GitHub</a>
+    </div>
+  </div>
 </footer>
 
+<!-- HIRE MODAL -->
+<div id="hire-modal" class="modal" onclick="if(event.target===this)closeModal('hire-modal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('hire-modal')">×</button>
+    <span class="modal-tag">Why Work With Me</span>
+    <h2 class="modal-title">What I actually bring</h2>
+    <div class="hire-reasons">
+      <div class="reason"><div class="reason-title">I came from engineering — no translation layer needed</div><div class="reason-desc">Developer → DevOps → PM. I've shipped code, run cloud deployments, and debugged production. I speak to engineering teams as a peer.</div></div>
+      <div class="reason"><div class="reason-title">Sprint throughput: 5 → 12 stories. Same team. 3 months.</div><div class="reason-desc">No extra headcount. Structured delivery process, earlier stakeholder validation, parallel testing. Proof that process design compounds fast.</div></div>
+      <div class="reason"><div class="reason-title">8,000 people trained in 3 months — voluntarily</div><div class="reason-desc">No mandate. Sessions that people attended because the value was real. That's change management, not compliance.</div></div>
+      <div class="reason"><div class="reason-title">I build the tools — 20+ shipped on my own time</div><div class="reason-desc">GB-Forge, AI-Delivery-Process, What's Next. All live. Built via prompt engineering. I don't just manage AI — I build with it.</div></div>
+      <div class="reason"><div class="reason-title">I solve problems. I don't escalate them.</div><div class="reason-desc">Delivery broken? I debug it. Process slow? I automate it. Team stuck? I unblock them. Ownership is a default, not a listed value.</div></div>
+      <div class="reason"><div class="reason-title">Senior enough to lead, technical enough to build</div><div class="reason-desc">The combination of PM experience, engineering background, and hands-on AI delivery is rare. That's the gap I fill.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRACK MODALS -->
+<div id="t1p1" class="modal" onclick="if(event.target===this)closeModal('t1p1')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t1p1')">×</button><span class="modal-tag">HPE · AI Training</span><h2 class="modal-title">AI Upskilling Initiative</h2><p class="modal-desc">Reached 8,000+ employees in 3 months through internal sessions, demos, and discussions on AI tools and workflows. Entirely voluntary — no mandate, no requirement. Built the governance framework, delivery pipeline, and session content across 3 active programmes.</p><div class="modal-meta"><div><div class="mm-label">Reached</div><div class="mm-value">8,000+</div></div><div><div class="mm-label">Timeframe</div><div class="mm-value">3 months</div></div><div><div class="mm-label">Mandate</div><div class="mm-value">Voluntary</div></div><div><div class="mm-label">Programmes</div><div class="mm-value">3</div></div></div></div></div>
+<div id="t1p2" class="modal" onclick="if(event.target===this)closeModal('t1p2')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t1p2')">×</button><span class="modal-tag">HPE · Internal Event</span><h2 class="modal-title">TechTalks Workshop Series</h2><p class="modal-desc">Designed and hosted a single-day internal knowledge-sharing event covering PM best practices, Agile governance, and emerging AI tools. Recognised by HPE leadership as best-in-class PM process building within the organisation.</p><div class="modal-meta"><div><div class="mm-label">Participants</div><div class="mm-value">200+</div></div><div><div class="mm-label">Recognition</div><div class="mm-value">Best-in-class</div></div></div></div></div>
+<div id="t1p3" class="modal" onclick="if(event.target===this)closeModal('t1p3')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t1p3')">×</button><span class="modal-tag">HPE · Content</span><h2 class="modal-title">AI Newsletter</h2><p class="modal-desc">Curate and publish a regular AI newsletter across an entire HPE tower — industry trends, programme updates, tool spotlights, and AI strategy insights for both engineering and leadership audiences.</p><div class="modal-meta"><div><div class="mm-label">Audience</div><div class="mm-value">Tower-wide</div></div><div><div class="mm-label">Cadence</div><div class="mm-value">Regular</div></div></div></div></div>
+<div id="t2p1" class="modal" onclick="if(event.target===this)closeModal('t2p1')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t2p1')">×</button><span class="modal-tag">Automation · Phase 1</span><h2 class="modal-title">AI Deduplication Filter</h2><p class="modal-desc">Uses LLM processing to audit legacy project repositories and automatically flag duplicate project requests before budget is allocated. Prevents teams building the same thing twice — common in large enterprise environments with distributed stakeholders.</p><div class="modal-meta"><div><div class="mm-label">Type</div><div class="mm-value">LLM audit</div></div><div><div class="mm-label">Impact</div><div class="mm-value">Capital saved</div></div></div></div></div>
+<div id="t2p2" class="modal" onclick="if(event.target===this)closeModal('t2p2')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t2p2')">×</button><span class="modal-tag">Automation · Phase 2</span><h2 class="modal-title">Transcript-to-BRD Pipeline</h2><p class="modal-desc">AI-assisted workflow that ingests raw stakeholder meeting recordings and transcripts and outputs structured, enterprise-grade Business Requirement Documents. Eliminates manual note-taking lag and shifts team focus to execution.</p><div class="modal-meta"><div><div class="mm-label">Input</div><div class="mm-value">Raw transcripts</div></div><div><div class="mm-label">Output</div><div class="mm-value">Structured BRDs</div></div></div></div></div>
+<div id="t2p3" class="modal" onclick="if(event.target===this)closeModal('t2p3')"><div class="modal-box"><button class="modal-close" onclick="closeModal('t2p3')">×</button><span class="modal-tag">Framework · v2.1</span><h2 class="modal-title">7-Phase AI Delivery Lifecycle</h2><p class="modal-desc">Custom AI delivery framework covering Initiation, Requirements, Architecture, Risk & Governance, Model Development, Deployment/MLOps, and Monitoring. Compatible with Jira, MS Project, Asana. Live at v2.1 with RACI governance, risk register, and PM checklists built in.</p><div class="modal-meta"><div><div class="mm-label">Phases</div><div class="mm-value">7</div></div><div><div class="mm-label">Version</div><div class="mm-value">v2.1</div></div></div></div></div>
+
+<script src="in-nav.js"></script>
 </body>
 </html>
