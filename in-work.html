@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Sanji Balan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="in-shared.css">
+  <style>
+    .cs-card{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:2rem;margin-top:1.5rem;}
+    .cs-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:1.5rem 0;}
+    .cs-meta-item{display:flex;flex-direction:column;}
+    .cs-meta-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:.4rem;}
+    .cs-meta-value{font-size:22px;font-weight:800;color:var(--accent);}
+    .cs-section{margin-bottom:1.5rem;}
+    .cs-section:last-child{margin-bottom:0;}
+    .cs-section-label{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.7rem;}
+    .cs-section p{font-size:14px;color:var(--text2);line-height:1.85;}
+    .cs-section ul{padding-left:1.2rem;margin-top:.5rem;display:flex;flex-direction:column;gap:.4rem;}
+    .cs-section ul li{font-size:14px;color:var(--text2);line-height:1.7;}
+    .cs-section ul li::marker{color:var(--accent);}
+    @media(max-width:600px){.cs-meta{grid-template-columns:1fr 1fr;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="in-index.html" class="nav-brand">Sanji Balan</a>
+  <div class="nav-links">
+    <a href="in-about.html" class="nav-link">About</a>
+    <a href="in-work.html" class="nav-link active">Work</a>
+    <a href="in-projects.html" class="nav-link">Projects</a>
+    <a href="in-story.html" class="nav-link">Thinking</a>
+    <a href="in-contact.html" class="nav-link">Contact</a>
+    <button class="nav-cta" onclick="openModal('hire-modal')">Open to Opportunities</button>
+  </div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="in-about.html">About</a><a href="in-work.html">Work</a><a href="in-projects.html">Projects</a><a href="in-story.html">Thinking</a><a href="in-contact.html">Contact</a>
+  <a href="#" class="m-cta" onclick="openModal('hire-modal')">Open to Opportunities</a>
+</div>
+
+<div class="page">
+  <div class="reveal">
+    <p class="hero-tag">Work</p>
+    <h1 class="hero-h1">Programmes & tools<br>I've delivered</h1>
+    <p class="hero-sub">Enterprise AI tools, automation pipelines, and delivery programmes shipped across FinTech, Blockchain, and Global ERP environments over 11+ years.</p>
+  </div>
+
+  <!-- ENTERPRISE TOOLS -->
+  <div class="sec reveal">
+    <p class="sec-tag">Enterprise AI Tools</p>
+    <h2 class="sec-h2">Built and shipped inside HPE</h2>
+    <div class="cards-grid">
+      <div class="card clickable" onclick="openModal('prod1')">
+        <span class="card-badge">AI · Compliance</span>
+        <h3 class="card-title">AI Contract Validation Tool</h3>
+        <p class="card-desc">Configured validation paths, guardrails, and risk scoring models. Automated legal and compliance screening — contract review that previously required manual effort now runs through structured AI gates.</p>
+        <div class="card-tags"><span class="tag">Legal automation</span><span class="tag">Risk scoring</span><span class="tag">Guardrails</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('prompt-coach')">
+        <span class="card-badge">AI · Productivity</span>
+        <h3 class="card-title">Prompt Coach</h3>
+        <p class="card-desc">Analyses prompts written by team members, identifies structural weaknesses, and suggests concrete improvements. Helps teams write better prompts without needing deep AI expertise.</p>
+        <div class="card-tags"><span class="tag">Prompt analysis</span><span class="tag">Suggestions engine</span><span class="tag">Team upskilling</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('knowledge-hub')">
+        <span class="card-badge">AI · Knowledge</span>
+        <h3 class="card-title">Knowledge Hub</h3>
+        <p class="card-desc">Teams upload up to 20 documents and ask questions to get answers grounded in those specific files. Replaces manual document search with AI-powered retrieval for policies, specs, and process guides.</p>
+        <div class="card-tags"><span class="tag">Document Q&A</span><span class="tag">20 file upload</span><span class="tag">RAG-based</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('power-automate')">
+        <span class="card-badge">Automation · Communication</span>
+        <h3 class="card-title">Power Automate Workflows</h3>
+        <p class="card-desc">Automated stakeholder and team updates on project status and action items. Structured notifications delivered without anyone manually compiling update emails.</p>
+        <div class="card-tags"><span class="tag">Stakeholder updates</span><span class="tag">Action items</span><span class="tag">Power Automate</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('process-iq')">
+        <span class="card-badge">Automation · Documentation</span>
+        <h3 class="card-title">Process IQ</h3>
+        <p class="card-desc">Auto-generates user manuals and test documents by capturing screenshots of application pages based on user activity. Eliminates manual workflow documentation effort entirely.</p>
+        <div class="card-tags"><span class="tag">Auto-documentation</span><span class="tag">User manuals</span><span class="tag">Test docs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRAMMES -->
+  <div class="sec reveal">
+    <p class="sec-tag">Major Programmes</p>
+    <h2 class="sec-h2">Delivered across companies</h2>
+    <div class="cards-grid">
+      <div class="card clickable" onclick="openModal('sap')">
+        <span class="card-badge">HPE · Enterprise ERP</span>
+        <h3 class="card-title">SAP Hybris & S/4 HANA</h3>
+        <p class="card-desc">Managed 25+ project and 35+ operational releases across 8 countries. Restructured delivery to improve sprint throughput from 5 to 12 user stories in 3 months — same team, no extra headcount.</p>
+        <div class="card-tags"><span class="tag">60+ releases</span><span class="tag">8 countries</span><span class="tag">5→12 stories</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('upskill')">
+        <span class="card-badge">HPE · AI Training</span>
+        <h3 class="card-title">AI Upskilling Initiative</h3>
+        <p class="card-desc">Reached 8,000+ employees in 3 months through voluntary sessions. Built governance, delivery framework, and content pipeline across 3 active programmes from scratch.</p>
+        <div class="card-tags"><span class="tag">8,000+ reached</span><span class="tag">3 months</span><span class="tag">Voluntary</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('credit')">
+        <span class="card-badge">FinTech · Product</span>
+        <h3 class="card-title">Digital Credit Card Platform</h3>
+        <p class="card-desc">Shipped mobile-first digital credit card product under significant time and resource constraints. Awarded department recognition for on-time delivery excellence.</p>
+        <div class="card-tags"><span class="tag">On time</span><span class="tag">Award recognised</span></div>
+      </div>
+      <div class="card clickable" onclick="openModal('krypcore')">
+        <span class="card-badge">Blockchain · Middleware</span>
+        <h3 class="card-title">KrypCore Middleware</h3>
+        <p class="card-desc">Co-developed enterprise blockchain middleware across supply chain, finance, and food provenance. Managed PoC partnerships with Microsoft and Accenture.</p>
+        <div class="card-tags"><span class="tag">Enterprise scale</span><span class="tag">Microsoft · Accenture</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY -->
+  <div class="sec reveal">
+    <p class="sec-tag">Case Study</p>
+    <h2 class="sec-h2">5 → 12 user stories.<br>Same team. 3 months.</h2>
+    <div class="cs-card">
+      <div class="cs-meta">
+        <div class="cs-meta-item"><span class="cs-meta-label">Before</span><span class="cs-meta-value">5 stories</span></div>
+        <div class="cs-meta-item"><span class="cs-meta-label">After</span><span class="cs-meta-value">12 stories</span></div>
+        <div class="cs-meta-item"><span class="cs-meta-label">Timeframe</span><span class="cs-meta-value">3 months</span></div>
+        <div class="cs-meta-item"><span class="cs-meta-label">Team change</span><span class="cs-meta-value">None</span></div>
+      </div>
+      <div class="cs-section">
+        <div class="cs-section-label">The Problem</div>
+        <p>Our team was completing only 5 user stories per sprint despite having the technical capacity to deliver more. The bottleneck wasn't development — it was the delivery process. No clearly defined roadmap, misaligned project phases, and stakeholders introducing urgent changes late in the cycle. Requirements evolved after development had started, causing rework during UAT. Testing and deployment preparation started too late, creating delays and increasing release risk.</p>
+      </div>
+      <div class="cs-section">
+        <div class="cs-section-label">What I Changed</div>
+        <ul>
+          <li>Defined a clear delivery roadmap with timelines, milestones, and approval gates before development began</li>
+          <li>Introduced early stakeholder demos in developers' local environments before SIT to validate functionality and catch change requests early</li>
+          <li>Ensured unit test, SIT, and UAT test cases along with test data were prepared during development — not after</li>
+          <li>Started deployment planning one week before release including checklists, approvals, environment validation, and rollback planning</li>
+        </ul>
+      </div>
+      <div class="cs-section">
+        <div class="cs-section-label">What Happened</div>
+        <ul>
+          <li>Sprint throughput increased from 5 to 12 completed user stories without increasing team size</li>
+          <li>Change requests during UAT reduced significantly through early stakeholder validation</li>
+          <li>Delays between Development, SIT, and UAT eliminated by preparing testing activities in advance</li>
+          <li>Deployment readiness improved — smoother releases with fewer last-minute issues</li>
+          <li>The process became the team's standard way of working and continued to improve as the team grew</li>
+        </ul>
+      </div>
+      <div class="cs-section">
+        <div class="cs-section-label">What I'd Do Differently</div>
+        <p>I would introduce stakeholder demonstrations and deployment readiness reviews even earlier. I would also implement delivery metrics and dashboards from day one to monitor cycle time, bottlenecks, and throughput continuously — that visibility earlier would have allowed us to identify inefficiencies faster and optimise sooner.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner"><span class="footer-copy">© 2025 Gomathi Balan S N· Bengaluru</span><div class="footer-links"><a href="mailto:gomsbalan@gmail.com" class="footer-link">gomsbalan@gmail.com</a><a href="https://www.linkedin.com/in/gomathibalansn143/" class="footer-link" target="_blank">LinkedIn</a><a href="https://github.com/gomsb143" class="footer-link" target="_blank">GitHub</a></div></div></footer>
+
+<!-- MODALS -->
+<div id="prod1" class="modal" onclick="if(event.target===this)closeModal('prod1')"><div class="modal-box"><button class="modal-close" onclick="closeModal('prod1')">×</button><span class="modal-tag">HPE · AI · Compliance</span><h2 class="modal-title">AI Contract Validation Tool</h2><p class="modal-desc">Configured end-to-end validation pathways, guardrails, and AI-powered risk scoring models for legal and compliance screening. Contract review that previously required manual effort now runs through structured AI gates — reducing lag and de-risking regulatory penalties.</p><div class="modal-meta"><div><div class="mm-label">Type</div><div class="mm-value">Legal automation</div></div><div><div class="mm-label">Impact</div><div class="mm-value">Risk reduction</div></div></div></div></div>
+<div id="prompt-coach" class="modal" onclick="if(event.target===this)closeModal('prompt-coach')"><div class="modal-box"><button class="modal-close" onclick="closeModal('prompt-coach')">×</button><span class="modal-tag">HPE · AI · Productivity</span><h2 class="modal-title">Prompt Coach</h2><p class="modal-desc">Analyses prompts written by team members, identifies structural weaknesses, and suggests concrete improvements. Teams don't need deep AI expertise to write effective prompts — the tool guides them through it. Reduces LLM hallucination risk by improving input quality at source.</p><div class="modal-meta"><div><div class="mm-label">Function</div><div class="mm-value">Prompt analysis</div></div><div><div class="mm-label">Outcome</div><div class="mm-value">Better outputs</div></div></div></div></div>
+<div id="knowledge-hub" class="modal" onclick="if(event.target===this)closeModal('knowledge-hub')"><div class="modal-box"><button class="modal-close" onclick="closeModal('knowledge-hub')">×</button><span class="modal-tag">HPE · AI · Knowledge</span><h2 class="modal-title">Knowledge Hub</h2><p class="modal-desc">Teams upload up to 20 documents simultaneously and ask questions grounded specifically in those files. Replaces time-consuming manual document search with AI-powered retrieval — useful for large policy documents, technical specs, and process guides referenced frequently.</p><div class="modal-meta"><div><div class="mm-label">Upload limit</div><div class="mm-value">20 files</div></div><div><div class="mm-label">Type</div><div class="mm-value">Document Q&A</div></div></div></div></div>
+<div id="power-automate" class="modal" onclick="if(event.target===this)closeModal('power-automate')"><div class="modal-box"><button class="modal-close" onclick="closeModal('power-automate')">×</button><span class="modal-tag">HPE · Automation</span><h2 class="modal-title">Power Automate Workflows</h2><p class="modal-desc">Built automated workflows that send structured stakeholder and team updates on project status and action items. Teams no longer manually compile and send update emails — the workflow triggers based on project events and delivers consistent, formatted updates to the right people at the right time.</p><div class="modal-meta"><div><div class="mm-label">Tool</div><div class="mm-value">Power Automate</div></div><div><div class="mm-label">Output</div><div class="mm-value">Status updates</div></div></div></div></div>
+<div id="process-iq" class="modal" onclick="if(event.target===this)closeModal('process-iq')"><div class="modal-box"><button class="modal-close" onclick="closeModal('process-iq')">×</button><span class="modal-tag">HPE · Automation · Docs</span><h2 class="modal-title">Process IQ</h2><p class="modal-desc">Automatically generates user manuals and test documents by capturing screenshots of application pages based on user activity. As a user walks through a process, the tool records each step and compiles it into structured documentation — eliminating the effort of manually writing up workflows after the fact.</p><div class="modal-meta"><div><div class="mm-label">Output</div><div class="mm-value">User manuals</div></div><div><div class="mm-label">Also produces</div><div class="mm-value">Test docs</div></div></div></div></div>
+<div id="sap" class="modal" onclick="if(event.target===this)closeModal('sap')"><div class="modal-box"><button class="modal-close" onclick="closeModal('sap')">×</button><span class="modal-tag">HPE · SAP · Global ERP</span><h2 class="modal-title">SAP Hybris & S/4 HANA</h2><p class="modal-desc">Managed 25+ project and 35+ operational releases across 8 countries. Restructured delivery process to increase sprint throughput from 5 to 12 user stories within 3 months — same team, no extra headcount. Enabled real-time data flow across finance and supply chain through S/4 HANA integration.</p><div class="modal-meta"><div><div class="mm-label">Releases</div><div class="mm-value">60+</div></div><div><div class="mm-label">Countries</div><div class="mm-value">8</div></div><div><div class="mm-label">Before</div><div class="mm-value">5 stories/sprint</div></div><div><div class="mm-label">After</div><div class="mm-value">12 stories/sprint</div></div></div></div></div>
+<div id="upskill" class="modal" onclick="if(event.target===this)closeModal('upskill')"><div class="modal-box"><button class="modal-close" onclick="closeModal('upskill')">×</button><span class="modal-tag">HPE · AI Training</span><h2 class="modal-title">AI Upskilling Initiative</h2><p class="modal-desc">Reached 8,000+ employees in 3 months through internal sessions, discussions, and demonstrations on AI tools and workflows. Entirely voluntary — no mandate, no requirement. Built governance framework, delivery pipeline, and session content across 3 active programmes.</p><div class="modal-meta"><div><div class="mm-label">Reached</div><div class="mm-value">8,000+</div></div><div><div class="mm-label">Timeframe</div><div class="mm-value">3 months</div></div><div><div class="mm-label">Mandate</div><div class="mm-value">Voluntary</div></div></div></div></div>
+<div id="credit" class="modal" onclick="if(event.target===this)closeModal('credit')"><div class="modal-box"><button class="modal-close" onclick="closeModal('credit')">×</button><span class="modal-tag">Finnovation · FinTech</span><h2 class="modal-title">Digital Credit Card Platform</h2><p class="modal-desc">Shipped mobile-first digital credit card product under significant time and resource constraints. Coordinated across engineering, QA, and business to hit deadline. Awarded department recognition for on-time delivery excellence.</p><div class="modal-meta"><div><div class="mm-label">Delivery</div><div class="mm-value">On time</div></div><div><div class="mm-label">Recognition</div><div class="mm-value">Dept. award</div></div></div></div></div>
+<div id="krypcore" class="modal" onclick="if(event.target===this)closeModal('krypcore')"><div class="modal-box"><button class="modal-close" onclick="closeModal('krypcore')">×</button><span class="modal-tag">KrypC · Blockchain</span><h2 class="modal-title">KrypCore Middleware</h2><p class="modal-desc">Co-developed enterprise blockchain middleware and scaled delivery across supply chain, finance, and food provenance verticals. Managed PoC partnerships with Microsoft and Accenture as primary client interface. Delivered workshops for 200+ students.</p><div class="modal-meta"><div><div class="mm-label">Duration</div><div class="mm-value">13 months</div></div><div><div class="mm-label">Partners</div><div class="mm-value">Microsoft · Accenture</div></div></div></div></div>
+<div id="hire-modal" class="modal" onclick="if(event.target===this)closeModal('hire-modal')"><div class="modal-box"><button class="modal-close" onclick="closeModal('hire-modal')">×</button><span class="modal-tag">Why Work With Me</span><h2 class="modal-title">What I actually bring</h2><div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;"><div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">Engineering background — no translation layer</div><div style="font-size:12px;color:var(--text2);">Developer → DevOps → PM. I speak to engineers as a peer.</div></div><div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">5 → 12 stories. Same team. 3 months.</div><div style="font-size:12px;color:var(--text2);">Structured delivery process. Real results.</div></div><div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">8,000 people trained voluntarily in 3 months</div><div style="font-size:12px;color:var(--text2);">No mandate. Sessions people chose to attend.</div></div></div></div></div>
+
+<script src="in-nav.js"></script>
+</body>
+</html>

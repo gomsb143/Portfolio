@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sanji Balan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="in-shared.css">
+  <style>
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:1.5rem;}
+    .contact-links{display:flex;flex-direction:column;}
+    .contact-link{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2);transition:color .2s;}
+    .contact-link:first-child{border-top:1px solid var(--border);}
+    .contact-link:hover{color:var(--accent);}
+    .contact-arr{font-size:16px;transition:transform .2s;}
+    .contact-link:hover .contact-arr{transform:translate(3px,-3px);}
+    .meta-cards{display:flex;flex-direction:column;gap:1.2rem;}
+    .meta-card{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:1.4rem;}
+    .mc-label{font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:.5rem;}
+    .mc-value{font-size:15px;color:var(--text);font-weight:700;}
+    .mc-sub{font-size:12px;color:var(--text3);margin-top:.3rem;line-height:1.5;}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2.5rem;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="in-index.html" class="nav-brand">Sanji Balan</a>
+  <div class="nav-links">
+    <a href="in-about.html" class="nav-link">About</a>
+    <a href="in-work.html" class="nav-link">Work</a>
+    <a href="in-projects.html" class="nav-link">Projects</a>
+    <a href="in-story.html" class="nav-link">Thinking</a>
+    <a href="in-contact.html" class="nav-link active">Contact</a>
+    <button class="nav-cta" onclick="openModal('hire-modal')">Open to Opportunities</button>
+  </div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="in-about.html">About</a><a href="in-work.html">Work</a><a href="in-projects.html">Projects</a><a href="in-story.html">Thinking</a><a href="in-contact.html">Contact</a>
+  <a href="#" class="m-cta" onclick="openModal('hire-modal')">Open to Opportunities</a>
+</div>
+
+<div class="page">
+  <div class="reveal">
+    <p class="hero-tag">Contact</p>
+    <h1 class="hero-h1">Let's have<br>a real conversation.</h1>
+    <p class="hero-sub">Currently at HPE, open to exploring the right next opportunity. Email is the fastest way to reach me — I respond within 24 hours.</p>
+  </div>
+
+  <div class="sec reveal">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-links">
+          <a href="mailto:gomsbalan@gmail.com" class="contact-link"><span>gomsbalan@gmail.com</span><span class="contact-arr">↗</span></a>
+          <a href="https://www.linkedin.com/in/gomathibalansn143/" target="_blank" class="contact-link"><span>LinkedIn — gomathibalansn143</span><span class="contact-arr">↗</span></a>
+          <a href="https://github.com/gomsb143" target="_blank" class="contact-link"><span>GitHub — gomsb143</span><span class="contact-arr">↗</span></a>
+          <a href="https://gomsb143.github.io/gb-forge/" target="_blank" class="contact-link"><span>GB-Forge — 20 live tools</span><span class="contact-arr">↗</span></a>
+          <a href="https://gomsb143.github.io/AI-Delivery-Process/" target="_blank" class="contact-link"><span>AI Delivery Process — v2.1</span><span class="contact-arr">↗</span></a>
+          <a href="https://gomsb143.github.io/whatnext/" target="_blank" class="contact-link"><span>What's Next — India Career Guide</span><span class="contact-arr">↗</span></a>
+        </div>
+      </div>
+      <div class="meta-cards">
+        <div class="meta-card">
+          <div class="mc-label">Current Location</div>
+          <div class="mc-value">Bengaluru, India</div>
+          <div class="mc-sub">Open to opportunities across India</div>
+        </div>
+        <div class="meta-card">
+          <div class="mc-label">Current Role</div>
+          <div class="mc-value">Senior Program Manager</div>
+          <div class="mc-sub">Hewlett Packard Enterprise · Leading AI delivery and upskilling programmes</div>
+        </div>
+        <div class="meta-card">
+          <div class="mc-label">Availability</div>
+          <div class="mc-value">Open to Opportunities</div>
+          <div class="mc-sub">Interested in Technical AI PM, AI Delivery Manager, and Digital Transformation roles</div>
+        </div>
+        <div class="meta-card">
+          <div class="mc-label">Response Time</div>
+          <div class="mc-value">Within 24 hours</div>
+          <div class="mc-sub">Email preferred for first contact. LinkedIn works too.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec reveal">
+    <div style="background:var(--bg2);border:1px solid var(--border2);border-radius:6px;padding:2.5rem;text-align:center;">
+      <h2 style="font-size:26px;font-weight:800;margin-bottom:.7rem;letter-spacing:-.02em;">Ready to talk?</h2>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:1.5rem;">No forms. No waiting. Just email.</p>
+      <div class="btns" style="justify-content:center;">
+        <a href="mailto:gomsbalan@gmail.com" class="btn btn-primary">gomsbalan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/gomathibalansn143/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2025 Gomathi Balan S N· Technical AI Program Manager · Bengaluru</span>
+    <div class="footer-links">
+      <a href="mailto:gomsbalan@gmail.com" class="footer-link">gomsbalan@gmail.com</a>
+      <a href="https://www.linkedin.com/in/gomathibalansn143/" class="footer-link" target="_blank">LinkedIn</a>
+      <a href="https://github.com/gomsb143" class="footer-link" target="_blank">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<div id="hire-modal" class="modal" onclick="if(event.target===this)closeModal('hire-modal')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('hire-modal')">×</button>
+    <span class="modal-tag">Why Work With Me</span>
+    <h2 class="modal-title">What I actually bring</h2>
+    <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
+      <div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">Engineering background — no translation layer</div><div style="font-size:12px;color:var(--text2);">Developer → DevOps → PM. I speak to engineers as a peer.</div></div>
+      <div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">Sprint throughput: 5 → 12 stories. Same team. 3 months.</div><div style="font-size:12px;color:var(--text2);">Structured delivery process. Real results. No extra headcount.</div></div>
+      <div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">8,000 people trained voluntarily in 3 months</div><div style="font-size:12px;color:var(--text2);">No mandate. Sessions people chose to attend because they were valuable.</div></div>
+      <div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">20+ tools built on my own time</div><div style="font-size:12px;color:var(--text2);">I build the things I manage. No permission needed.</div></div>
+      <div style="padding:1rem;background:var(--bg3);border-left:3px solid var(--accent);border-radius:4px;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:.3rem;">Senior enough to lead. Technical enough to build.</div><div style="font-size:12px;color:var(--text2);">That combination is rare. It's the gap I fill.</div></div>
+    </div>
+  </div>
+</div>
+
+<script src="in-nav.js"></script>
+</body>
+</html>
